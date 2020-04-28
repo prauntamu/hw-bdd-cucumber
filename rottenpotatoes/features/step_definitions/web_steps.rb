@@ -18,6 +18,10 @@
 # * http://elabs.se/blog/15-you-re-cuking-it-wrong
 #
 
+#paige raun
+#software engineering tamu csce 431 
+#singapore wintermester 2020 
+
 
 require 'uri'
 require 'cgi'

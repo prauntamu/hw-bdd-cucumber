@@ -1,3 +1,7 @@
+#paige raun
+#software engineering tamu csce 431 
+#singapore wintermester 2020 
+
 Feature: display list of movies sorted by different criteria
 
   As an avid moviegoer
@@ -24,8 +28,8 @@ Background: movies have been added to database
 
 Scenario: sort movies alphabetically
   When I follow "Movie Title"
-  # your steps here
+  Then I should see "Chicken Run" before "The Incredibles" 
 
 Scenario: sort movies in increasing order of release date
   When I follow "Release Date"
-  # your steps here
+  Then I should see "The Help" before "Chocolat" 

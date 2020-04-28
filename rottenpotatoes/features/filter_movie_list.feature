@@ -1,3 +1,7 @@
+#paige raun
+#software engineering tamu csce 431 
+#singapore wintermester 2020  
+
 Feature: display list of movies filtered by MPAA rating
  
   As a concerned parent
@@ -22,12 +26,23 @@ Background: movies have been added to database
   And  I am on the RottenPotatoes home page
   Then 10 seed movies should exist
 
+
 Scenario: restrict to movies with 'PG' or 'R' ratings
+  #When I uncheck PG-13
+  When I check the following ratings: R, PG
+  When I uncheck the following ratings: G, PG-13
+  When I press "Refresh"
+  Then I should not see "Chocolat"
+  And I should see "Amelie" 
+  #Then I should not see "Chocolat" 
   # enter step(s) to check the 'PG' and 'R' checkboxes
   # enter step(s) to uncheck all other checkboxes
   # enter step to "submit" the search form on the homepage
   # enter step(s) to ensure that PG and R movies are visible
   # enter step(s) to ensure that other movies are not visible
+  
+  
 
 Scenario: all ratings selected
-  # see assignment
+  When I check the following ratings: R, PG, G, PG-13
+  Then I should see all the movies
